@@ -7,7 +7,7 @@ class Prisoner:
         self.tries = tries
         self.successed = successed
 
-    def open_boxes(self, boxdict):
+    def open_boxes_solution(self, boxdict):
         openedbox = boxdict[self.num]
         self.tries -= 1
         while self.tries > 0 and openedbox != self.num:
@@ -49,7 +49,7 @@ for i in range(10000):
     objs = [Prisoner(i, 50) for i in range(1, 51)]
 
     for obj in objs:
-        obj.open_boxes(mydict)
+        obj.open_boxes_solution(mydict)
         if obj.successed == 1:
             survived_prisoner_solution += 1
 
