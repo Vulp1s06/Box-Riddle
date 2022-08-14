@@ -7,7 +7,7 @@ class Prisoner:
         self.tries = tries
         self.successed = successed
 
-    def open_boxes(self, boxdict, successed=0):
+    def open_boxes(self, boxdict):
         openedbox = boxdict[self.num]
         self.tries -= 1
         while self.tries > 0 and openedbox != self.num:
@@ -18,7 +18,7 @@ class Prisoner:
         else:
             pass
 
-    def open_boxes_random(self, boxdict, successed=0):
+    def open_boxes_random(self, boxdict):
         openedbox = boxdict[random.randint(1, 100)]
         self.tries -= 1
         while self.tries > 0 and openedbox != self.num:
